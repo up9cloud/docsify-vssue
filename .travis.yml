@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - stable
 after_success:
-- npm run buuild
+- npm run build
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
