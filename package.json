@@ -1,0 +1,27 @@
+{
+  "name": "docsify-vssue",
+  "version": "1.0.0",
+  "description": "Vssue plugin of docsify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && uglifyjs src/docsify-vssue.js --compress --mangle > dist/docsify-vssue.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/up9cloud/docsify-vssue.git"
+  },
+  "keywords": [
+    "vssue",
+    "docsify"
+  ],
+  "author": "up9cloud (https://github.com/up9cloud)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/up9cloud/docsify-vssue/issues"
+  },
+  "homepage": "https://github.com/up9cloud/docsify-vssue#readme",
+  "devDependencies": {
+    "uglify-es": "^3.3.9"
+  }
+}

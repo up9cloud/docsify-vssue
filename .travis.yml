@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+after_success:
+- npm run buuild
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key:
+    secure: I6LCUHgMfRsiEprfjYmWX8RTx4YN9RGrUoLv13ZY7hMBdNik5gG22l3rsZyd8Vnl5vbucfRHzERPTXoBj9OiyqEgmUQeWCcwaOvxGVuMEywPCmbWZ9CwLuGw/yQAF0ccHy1r9U0YmjhwohVYMZCO9wyVfLGavWK1mZvdg/9pn239M3g4rrVtnAjvxxlk8kjrQHc7Hby34QGOauCNJ3JO56CF1uK4sNHD4NwNQC0Y4XPWFDqukpVhikwn+Drb52XrleFLCdSo0Q7/hL3c3ByNMPUJe0Tgh6B/KQJCEvfcgXnTZW9NXIOvj/XCIVziXNCCxNQkovU3+M6Dz+g2TOlBCip/lNSrwOwP6BFxy7ZuNmKns+8G2OouFLoUwlCZIWMjK18C73ikIyV+cmkdTmuQcI/AIMwVUyfOArH4mbhTKTFEJSjACtDiQIiicVkxf1oY1RzlS7/VJQBkpU3VuipFwQB+YxKflDTCaWsJa/yJ96cbOc4sTmxN+TL6U5/G9utPcG00v7KcwaQpcpk4fd1xzfX2Owmx95FhxIX+c1MklheO6NfYzr+HqCfptBvDNEumkG5Us/mzgyf1XuaHzEuDAkTC8p1Z491wv1aCGZIElomj4eKN8oXIZylDRSCr8G5SAQWLj2lWyR83B+I3o4jSIVdhyXfrHlTJ0U62P6GMMKw=
+  on:
+    tags: true
+    repo: up9cloud/docsify-vssue
+    branch: master
+  skip_cleanup: true
