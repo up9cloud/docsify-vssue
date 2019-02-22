@@ -16,6 +16,7 @@
       dom.appendTo(parent, container)
 
       let el = dom.create('div')
+      dom.appendTo(container, el)
       vm = new Vue({
         el,
         // https://vssue.js.org/options/#vssue-options
@@ -23,7 +24,6 @@
           props: docsify.config.vssue
         })
       })
-      dom.appendTo(container, el)
     })
   }
 
