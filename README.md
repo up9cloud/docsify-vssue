@@ -2,6 +2,9 @@
 
 ## Usage
 
+- Follow this [guide](https://vssue.js.org/guide/github.html#create-a-new-oauth-app) to setup
+- Add script to your docsify site's `index.html`
+
 ```html
 <body>
   <div id="app"></div>
