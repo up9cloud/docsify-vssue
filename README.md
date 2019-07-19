@@ -21,7 +21,7 @@
         // see https://vssue.js.org/options/#component-props
         title: options => {
           let title = `${options.prefix}${location.origin}` // share one issue for localhost
-          if (routerMode !== 'localhost') {
+          if (location.hostname !== 'localhost') {
             title += location.pathname
             if (routerMode !== 'hash') {
               title += location.hash
