@@ -9,20 +9,26 @@
 <body>
   <div id="app"></div>
   <script>
-    let pathNoQuery
     let routerMode
-    if (location.hostname === 'localhost') { // share one issue for local dev
+    if (location.hostname === 'localhost') {
       routerMode = 'hash'
-      pathNoQuery = `${location.origin}${location.pathname}`
     } else {
-      routerMode = 'history' // or hash
-      pathNoQuery = `${location.origin}${location.pathname}${location.hash}`
+      routerMode = 'history' // or 'hash', up to you
     }
     window.$docsify = {
       routerMode,
       vssue: {
         // see https://vssue.js.org/options/#component-props
-        title: options => `${options.prefix}${pathNoQuery}`,
+        title: options => {
+          let title = `${options.prefix}${location.origin}` // share one issue for localhost
+          if (routerMode !== 'localhost') {
+            title += location.pathname
+            if (routerMode !== 'hash') {
+              title += location.hash
+            }
+          }
+          return title
+        },
         options: {
           prefix: '',
           labels: ['commenting-system'],
